@@ -106,7 +106,13 @@ header .navbar ul {
 .fa-solid {
   cursor: pointer;
 }
-
+@media (max-width: 768px) {
+  .home .content,
+  .home .image {
+    flex: 1 100%;
+    max-width: 100%;
+  }
+}
 .about {
   background-color: antiquewhite;
   min-height: auto;
@@ -116,7 +122,6 @@ header .navbar ul {
     gap: 2rem;
     .image {
       text-align: center;
-      flex: 1 1 30rem;
       img {
         cursor: pointer;
         width: 20rem;
@@ -125,6 +130,16 @@ header .navbar ul {
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
       }
     }
+  }
+}
+@media (max-width: 768px) {
+  .about .row {
+    flex-direction: column;
+  }
+
+  .about .image,
+  .about .content {
+    max-width: 100%;
   }
 }
 .skills {
@@ -159,6 +174,11 @@ header .navbar ul {
     }
   }
 }
+@media (max-width: 768px) {
+  .skills .container {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+}
 .education {
   background-color: blanchedalmond;
   .box-container {
@@ -186,6 +206,7 @@ header .navbar ul {
     }
   }
 }
+
 .box-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
