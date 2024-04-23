@@ -270,3 +270,10 @@ section {
 .dark-theme .footer {
   background-image: linear-gradient(azure, black);
 }
+.home #particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
