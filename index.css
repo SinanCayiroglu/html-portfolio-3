@@ -107,6 +107,7 @@ header .navbar ul {
   cursor: pointer;
 }
 @media (max-width: 768px) {
+  .home{flex-direction: column;}
   .home .content,
   .home .image {
     flex: 1 100%;
@@ -149,7 +150,7 @@ header .navbar ul {
     background-color: bisque;
     padding: 2rem;
     border-radius: 1rem;
-    width: 90%;
+    width: 100%;
     .row {
       display: grid;
       grid-template-columns: repeat(6, 1fr);
@@ -175,7 +176,7 @@ header .navbar ul {
   }
 }
 @media (max-width: 768px) {
-  .skills .container {
+  .skills .container .row {
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   }
 }
@@ -206,7 +207,11 @@ header .navbar ul {
     }
   }
 }
-
+@media (max-width: 768px) {
+  .education .box-container .box{
+    flex-direction: column;
+  }
+}
 .box-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
