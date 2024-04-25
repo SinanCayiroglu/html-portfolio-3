@@ -1,0 +1,96 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <style>
+        body{
+            font-family:Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .choices img{
+            cursor: pointer;
+            width: 200px;
+            height: 200px;
+        }
+        #playerChoice img{
+            width: 100px;
+            height: 100px;
+        }
+        #computerChoice img{
+            width: 100px;
+            height: 100px;
+        }
+        .choice{
+            display: flex;
+        }
+        .greentext{
+            color: green;
+        }
+        .redtext{
+            color:red
+        }
+    </style>
+</head>
+<body>
+    <h1>Rock Paper Scissors</h1>
+    <div class="choices">
+        <button onclick="playGame('rock')" class="rock"><img src="./rock.jpg" alt="rock"></button>
+        <button onclick="playGame('paper')" class="paper"><img src="./paper.jpg" alt="rock"></button>
+        <button onclick="playGame('scissors')" class="scissors"><img src="./scissors.jpg" alt="rock"></button>
+    </div>
+    <div class="score">
+        <span id="playerscore">Player score:</span>
+    </div>
+    <div class="score">
+        <span id="computerscore">Computer score:</span>
+    </div>
+    <h2>Winner is</h2>
+    <div class="choice">
+        <div id="playerChoice"></div>
+    <div id="computerChoice"></div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        let computerScore =0
+            let playerScore=0
+        function playGame(playerChoice){
+            const choices = ["rock","paper","scissors"]
+            const computerChoice = choices[Math.floor(Math.random()*3)]
+            
+            $("#playerChoice").empty();
+    $("#computerChoice").empty();
+
+    $("#playerChoice").prepend('Player: <img src="./' + playerChoice + '.jpg">');
+    $("#computerChoice").prepend('Computer: <img src="./' + computerChoice + '.jpg">');
+    $("h2").removeClass("greentext redtext");
+    if(computerChoice == playerChoice) {
+        $("h2").text("IT'S A TIE");
+    } else if(playerChoice == 'rock' && computerChoice == 'scissors') {
+        $("h2").text("YOU WIN").addClass("greentext");
+        playerScore++;
+        $("#playerscore").text("Player Score:"+playerScore)
+        var rock = new Audio("./rock.mp3"); rock.play();
+    } else if(playerChoice == 'paper' && computerChoice == 'rock') {
+        $("h2").text("YOU WIN").addClass("greentext");
+        playerScore++;
+        $("#playerscore").text("Player Score:"+playerScore)
+        var paper = new Audio("./paper.mp3"); paper.play();
+    } else if(playerChoice == "scissors" && computerChoice == "paper") {
+        $("h2").text("YOU WIN").addClass("greentext");
+        playerScore++;
+        $("#playerscore").text("Player Score:"+playerScore)
+        var scissors = new Audio("./scissors.mp3"); scissors.play();
+    } else {
+        $("h2").text("YOU LOST").addClass("redtext");
+        computerScore++;
+        $("#computerscore").text("Computer Score:"+computerScore)
+    }
+}
+    </script>
+</body>
+</html>
