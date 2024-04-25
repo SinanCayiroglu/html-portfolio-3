@@ -90,6 +90,9 @@ header .navbar ul {
     font-weight: 600;
   }
 }
+.socials{
+  position: relative;
+}
 .socials .social-icons li {
   display: inline-block;
   font-size: 2rem;
