@@ -133,9 +133,11 @@ header .navbar ul {
         border-radius: 5%;
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
       }
+
     }
   }
 }
+
 @media (max-width: 768px) {
   .about .row {
     flex-direction: column;
@@ -214,6 +216,9 @@ header .navbar ul {
   .education .box-container .box{
     flex-direction: column;
   }
+}
+.projects p{
+  text-align: center;
 }
 .box-grid {
   display: grid;
