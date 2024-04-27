@@ -249,6 +249,7 @@ header .navbar ul {
       justify-content: center;
       align-items: center;
       background-color: rgba(0, 0, 0, 0.5);
+      h3{text-align: center;}
     }
   }
   .tilt:hover .project-description {
