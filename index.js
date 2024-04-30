@@ -49,6 +49,6 @@ srtop.reveal(".education .box-container")
 
 
 srtop.reveal(".projects .heading")
-srtop.reveal(".projects .box-grid")
+srtop.reveal(".projects .box")
 
 

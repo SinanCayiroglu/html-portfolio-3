@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime World</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="banner">
+        <h1>Anime World</h1>
+        <p>Discover your favorite anime series</p>
+        <div class="navbar">
+            <div class="random-anime">
+                <button id="randomAnimeButton" type="submit">Get Random anime</button>
+                <button id="airingAnime" type="submit">Get airing anime</button>
+                <button id="upcomingAnime" type="submit">Get upcoming anime</button>
+                <button id="favoriteAnime" type="submit">Most favorited anime</button>
+            </div>
+            <form class="search-bar" id="search-form" action="index.html" method="get">
+                <input type="search" name="search" id="search" placeholder="search an anime">
+                <button id="search-btn" type="submit">search</button>
+            </form>
+        </div>
+        
+    </header>
+
+    <div class="container" id="container">
+        <div class="anime-cards">
+            <div class="anime-card">
+                <div class="image" id="image">
+                    <img src="" alt="anime">
+                </div>
+                <div class="details" id="details">
+                    <h3 class="title"></h3>
+                    <p class="synopsis"></p>
+                    <div class="trailer">
+                        <iframe src=""  frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
