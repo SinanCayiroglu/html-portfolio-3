@@ -25,7 +25,8 @@ VanillaTilt.init(document.querySelectorAll(".tilt"), {
 });
 
 const srtop = ScrollReveal({
-    distance: '100px',
+    origin: 'top',
+    distance: '80px',
     duration: 1000,
     reset: true
 });
@@ -37,22 +38,17 @@ srtop.reveal('.home .image');
 
 srtop.reveal('.about .heading');
 srtop.reveal('.about .row');
-srtop.reveal('.about .row .image');
-srtop.reveal('.about .row .content');
-srtop.reveal('.about .row .content h3');
+
 
 srtop.reveal(".skills .heading")
 srtop.reveal(".skills .container")
-srtop.reveal(".skills .row")
-srtop.reveal(".skills .bar")
+
 
 srtop.reveal(".education .heading")
 srtop.reveal(".education .box-container")
-srtop.reveal(".education .box")
-srtop.reveal(".education .image")
-srtop.reveal(".education .content")
+
 
 srtop.reveal(".projects .heading")
 srtop.reveal(".projects .box-grid")
-srtop.reveal(".projects .box")
+
 
