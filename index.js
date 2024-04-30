@@ -1,52 +1,54 @@
+$('#menu').click(function () {
+    $(this).toggleClass('fa-times');
+    $('.navbar').toggleClass('nav-toggle');
+});
+$(".fa-solid").click(function(){
+    $("body").toggleClass("dark-theme")
+    $(".about").toggleClass("dark-theme")
+    $(".skills").toggleClass("dark-theme")
+    $(".education").toggleClass("dark-theme")
+})
 
-const fetchRecentAnimes = async () => {
-    try {
-        const response = await fetch("https://api3.sinanime.workers.dev/recent/1");
-        const data = await response.json();
-        generateRecentAnime(data)
-    } catch (error) {
-        console.error('There was a problem with the fetch operation:', error);
-    }
-};
+var typed = new Typed(".typing-text",{
+    strings:["junior web developer"],
+    loop:true,
+    typeSpeed:100,
+    backSpeed:50,
+    backDelay:1000,
+})
+VanillaTilt.init(document.querySelector(".tilt"),{
+    max:20
+})
 
-const generateRecentAnime = async (data ) =>{
-    const animeCards = document.querySelector(".anime-cards")
-    const animes = data.results
-    animeCards.innerHTML = animes.map(anime=>{
-        return `
-        <div class="anime-card">
-            <a href="episode.html?anime_id=${anime.id}">
-                <div class="anime-image">
-                    <img src="${anime.image}" alt="anime">
-                </div>
-                <div class="anime-detail">
-                ${anime.id}</div>
-            </a>
-            <span>1 hour ago</span>
-        </div>
-`
-    }).join('')
-}
-fetchRecentAnimes()
+VanillaTilt.init(document.querySelectorAll(".tilt"), {
+    max: 15,
+});
 
-const fetchSidebar = async()=>{
-    try{
-        const response = await fetch("https://api3.sinanime.workers.dev/home")
-        const data = await response.json()
-        console.log(data)
-        generateSidebar(data)
-    }catch(error){
-        console.error(error)
-    }
-}
+const srtop = ScrollReveal({
+    origin: 'top',
+    distance: '80px',
+    duration: 1000,
+    reset: true
+});
 
-const generateSidebar = async (data)=>{
-    const sidebar = document.querySelector(".side-bar ol")
-    const animes = data.results.anilistTrending
-    sidebar.innerHTML = animes.map(anime=>{
-        return `
-        <a href="anime.html?anime_id=${anime.title.userPreferred}"><li>${anime.title.userPreferred}</li></a>`
-    }).join('')
+srtop.reveal('.home .content');
+srtop.reveal('.home .socials');
+srtop.reveal('.home .image');
 
-}
-fetchSidebar()
+
+srtop.reveal('.about .heading');
+srtop.reveal('.about .row');
+
+
+srtop.reveal(".skills .heading")
+srtop.reveal(".skills .container")
+
+
+srtop.reveal(".education .heading")
+srtop.reveal(".education .box-container")
+
+
+srtop.reveal(".projects .heading")
+srtop.reveal(".projects .box",{ delay: 200 })
+
+
