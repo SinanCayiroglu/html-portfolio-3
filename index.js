@@ -49,6 +49,5 @@ srtop.reveal(".education .box-container")
 
 
 srtop.reveal(".projects .heading")
-srtop.reveal(".projects .box",{ delay: 200 })
 
 
