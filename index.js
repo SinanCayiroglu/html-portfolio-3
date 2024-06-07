@@ -10,7 +10,7 @@ $(".fa-solid").click(function(){
 })
 
 var typed = new Typed(".typing-text",{
-    strings:["junior web developer"],
+    strings:["web developer"],
     loop:true,
     typeSpeed:100,
     backSpeed:50,
@@ -38,7 +38,6 @@ srtop.reveal('.home .image');
 
 srtop.reveal('.about .heading');
 srtop.reveal('.about .row');
-
 
 srtop.reveal(".skills .heading")
 srtop.reveal(".skills .container")
